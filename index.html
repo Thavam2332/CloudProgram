@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTER COLLEGE REGISTRATION</title>
+    <style>
+        body {
+            background-color: lightslategray;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            margin: 0 auto;
+            width: 50%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="reset"] {
+            background-color: #dc3545;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #218838;
+        }
+        input[type="reset"]:hover {
+            background-color: #c82333;
+        }
+        h1, h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>KG COLLEGE OF ARTS AND SCIENCE</h1>
+    <h3>DEPARTMENT OF SOFTWARE SYSTEMS AND COMPUTER SCIENCE</h3>
+    <h3>INTER-COLLEGIATE REGISTRATION FORM</h3><br>
+
+    <form action="success.html" method="get">
+        <label>STUDENT NAME:</label>
+        <input type="text" name="student_name" size="40" required/><br>
+
+        <label>COLLEGE NAME:</label>
+        <select name="college_name" required>
+            <option value="">Select college name</option>
+            <option value="Air Force Administrative College, Coimbatore">Air Force Administrative College, Coimbatore</option>
+            <option value="Government Arts College, Coimbatore">Government Arts College, Coimbatore</option>
+            <option value="Government Arts College, Ooty">Government Arts College, Ooty</option>
+            <option value="PSG College of Technology">PSG College of Technology</option>
+            <option value="kg college of arts and science">KG College of Arts and Science</option>
+            <option value="others">Others</option>
+        </select><br>
+
+        <label>COURSE:</label>
+        <select name="course" required>
+            <option value="">Select course</option>
+            <option value="B.Sc.CS">B.Sc.CS</option>
+            <option value="BCA">BCA</option>
+            <option value="M.Sc.CS">M.Sc.CS</option>
+            <option value="others">Others</option>
+        </select><br>
+
+        <label>GENDER:</label><br>
+        <input type="radio" name="gender" value="Male" required/>Male<br>
+        <input type="radio" name="gender" value="Female"/>Female<br>
+        <input type="radio" name="gender" value="Others"/>Others<br><br>
+
+        <label>PHONE:</label>
+        <input type="tel" name="phone" pattern="\+91[0-9]{10}" placeholder="+91XXXXXXXXXX" required/><br>
+
+        <label>EMAIL:</label>
+        <input type="email" name="email" size="25" required/><br>
+
+        <label>ADDRESS:</label><br>
+        <textarea name="address" cols="80" rows="4" required></textarea><br>
+
+        <label>SELECT EVENT:</label><br>
+        <input type="checkbox" name="event" value="Quiz"/>QUIZ<br>
+        <input type="checkbox" name="event" value="Paper Presentation"/>PAPER PRESENTATION<br>
+        <input type="checkbox" name="event" value="Gaming"/>GAMING<br>
+        <input type="checkbox" name="event" value="Short Film"/>SHORT FILM<br>
+        <input type="checkbox" name="event" value="Poster"/>POSTER<br>
+        <input type="checkbox" name="event" value="Puzzle"/>PUZZLE<br>
+        <input type="checkbox" name="event" value="Technical Connection"/>TECHNICAL CONNECTION<br><br>
+
+        <input type="submit" value="Submit"/>
+        <input type="reset" value="Reset"/>
+    </form>
+
+</body>
+</html>
